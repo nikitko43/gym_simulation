@@ -1,0 +1,54 @@
+experiment:
+  visitations:
+    - 10: 432
+    - 11: 343
+    - 12: 296
+    - 13: 296
+    - 14: 248
+    - 15: 302
+    - 16: 410
+    - 17: 803
+    - 18: 1324
+    - 19: 1831
+    - 20: 951
+    - 21: 367
+    - 22: 55
+
+  # client working out 3 day on week - it's ~0.42 
+  # + may skip workout due to various reasons - decrease by 0.15
+  client_enter_probability: 0.27
+
+  trainers: 10
+
+  gym_capacity: 30
+
+  manager_capacity: 1
+
+  group_room_capacity: 10
+
+  clients:
+    - total: 500
+    - having_membership: 0.8
+
+  memberships:
+    - обычный: 
+      - male_probability: 0.85
+      - female_probability: 0.3
+    - групповой:
+      - male_probability: 0.05
+      - female_probability: 0.4
+    - персональный:
+      - male_probability: 0.1
+      - female_probability: 0.3
+
+  time_slots:
+    workout:
+      - distribution: uniform
+      - parameters:
+        - 30m
+        - 120m
+    choosing_membership:
+      - distribution: uniform
+      - parameters:
+        - 30s
+        - 10m

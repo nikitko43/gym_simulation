@@ -4,15 +4,20 @@ class Time:
 
     @property
     def day(self):
-        return self.simulation_time // 1440
+        return self.simulation_time // 86400
 
     @property
     def hour(self):
-        return (self.simulation_time // 60) % 24
+        return (self.simulation_time // 3600) % 24
 
     @property
     def minute(self):
+        return (self.simulation_time // 60) % 60
+
+    @property
+    def second(self):
         return self.simulation_time % 60
+    
 
     def __repr__(self):
-        return f'{str(self.hour).zfill(2)}:{str(self.minute).zfill(2)}'
+        return '{:02.0f}:{:02.0f}:{:02.0f}'.format(self.hour, self.minute, self.second)
