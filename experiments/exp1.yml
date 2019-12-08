@@ -52,3 +52,13 @@ experiment:
       - parameters:
         - 30s
         - 10m
+    workout_group:
+      - distribution: uniform
+      - parameters:
+        - 60m
+        - 90m
+    workout_personal:
+      - distribution: uniform
+      - parameters:
+        - 50m
+        - 70m

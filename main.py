@@ -204,7 +204,7 @@ class Client:
 
                 log(f'{self.name} занимается в зале для групповых тренировок...')
                 stats.inc('working_group')
-                yield env.timeout(experiment_time('workout'))
+                yield env.timeout(experiment_time('workout_group'))
 
         if self.membership.type == 'персональный':
             with gym.request() as req:
@@ -217,7 +217,7 @@ class Client:
 
                     log(f'{self.name} занимается в зале c персональным тренером...')
                     stats.inc('working_trainer')
-                    yield env.timeout(experiment_time('workout'))
+                    yield env.timeout(experiment_time('workout_personal'))
         
     def get_membership(self):
         log(f'{self.name} выбирает что приобрести...')
