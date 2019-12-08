@@ -1,5 +1,4 @@
 import simpy
-import names
 import random
 import os
 import csv

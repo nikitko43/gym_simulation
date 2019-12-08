@@ -29,12 +29,12 @@ class Experiment:
     def get_male_probabilities(self):
         mb = self.join(self.exp['memberships'])
         mp = 'male_probability'
-        return self.join(mb['обычный'])[mp], self.join(mb['обычный'])[mp], self.join(mb['обычный'])[mp]
+        return self.join(mb['обычный'])[mp], self.join(mb['групповой'])[mp], self.join(mb['персональный'])[mp]
 
     def get_female_probabilities(self):
         mb = self.join(self.exp['memberships'])
         fp = 'female_probability'
-        return self.join(mb['обычный'])[fp], self.join(mb['обычный'])[fp], self.join(mb['обычный'])[fp]
+        return self.join(mb['обычный'])[fp], self.join(mb['групповой'])[fp], self.join(mb['персональный'])[fp]
 
     def get_trainers(self):
         return self.exp['trainers']
